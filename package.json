@@ -1,0 +1,50 @@
+{
+  "name": "draftkingsapi",
+  "version": "0.1.0",
+  "description": "TypeScript client for draftkingsapi.com: DraftKings Pick6 lines and line history, DFS salaries, sportsbook odds and box scores. Independent, not affiliated with DraftKings.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/client.test.mjs",
+    "test:live": "npm run build && DRAFTKINGS_LIVE=1 node --test test/live.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "draftkings",
+    "pick6",
+    "dfs",
+    "sportsbook",
+    "odds",
+    "sports-data",
+    "api-client"
+  ],
+  "homepage": "https://draftkingsapi.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/draftkingsapi/draftkingsapi-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/draftkingsapi/draftkingsapi-js/issues"
+  }
+}
