@@ -3,9 +3,9 @@
  * browsers). draftkingsapi.com is independent and not affiliated with or endorsed by DraftKings.
  */
 
-export const VERSION = "0.1.0";
+export const VERSION = "0.1.1";
 export const DEFAULT_BASE_URL = "https://draftkingsapi.com";
-export const SIGN_UP_URL = "https://draftkingsapi.com/sign-up";
+export const SIGN_UP_URL = "https://draftkingsapi.com/auth/sign-up";
 
 export type Json = Record<string, unknown>;
 export type ParamValue = string | number | boolean | null | undefined;

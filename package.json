@@ -1,6 +1,6 @@
 {
   "name": "draftkingsapi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript client for draftkingsapi.com: DraftKings Pick6 lines and line history, DFS salaries, sportsbook odds and box scores. Independent, not affiliated with DraftKings.",
   "type": "module",
   "main": "./dist/index.js",

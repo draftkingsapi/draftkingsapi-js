@@ -1,12 +1,14 @@
 # DraftKings API for JavaScript and TypeScript: draftkingsapi
 
+**Website: [draftkingsapi.com](https://draftkingsapi.com/?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js)** for docs, a free API key, pricing and live status.
+
 The DraftKings API client for Node.js, TypeScript, Deno, Bun and browsers. `npm install draftkingsapi` and read DraftKings sportsbook odds, Pick6 lines, DFS salaries and box scores with typed responses.
 
-[Website](https://draftkingsapi.com/?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js) | [Docs](https://draftkingsapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js) | [Free API key](https://draftkingsapi.com/auth/sign-up?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js) | [Pricing](https://draftkingsapi.com/pricing?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js) | [All SDKs](https://draftkingsapi.com/sdks?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js)
+[Website](https://draftkingsapi.com/?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js) | [Docs](https://draftkingsapi.com/docs?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js) | [Free API key](https://draftkingsapi.com/auth/sign-up?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js) | [Pricing](https://draftkingsapi.com/pricing?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js) | [All SDKs](https://draftkingsapi.com/sdks?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js)
 
 Also for draftkingsapi.com: [Python: `pip install draftkingsapi`](https://github.com/draftkingsapi/draftkingsapi-python) | [MCP server: `npx -y draftkingsapi-mcp`](https://github.com/draftkingsapi/draftkingsapi-mcp)
 
-Client for [draftkingsapi.com](https://draftkingsapi.com/?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js): DraftKings Pick6 lines and line history, DFS salaries,
+Client for [draftkingsapi.com](https://draftkingsapi.com/?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js): DraftKings Pick6 lines and line history, DFS salaries,
 contests and slates, sportsbook odds and price history, and box scores. TypeScript types included, zero runtime
 dependencies, uses the global `fetch` (Node 18+, Deno, Bun, browsers). ESM only.
 
@@ -18,6 +20,9 @@ npm install draftkingsapi
 ```
 
 ## No key needed
+
+The keyless feeds are a delayed preview: no account and no credits, but limited to 25 calls a day per network (UTC
+day). Past that they return a 429 until the next day; a free key (100 credits a month, no card) has no such limit.
 
 ```js
 import { Client } from "draftkingsapi";
@@ -46,7 +51,7 @@ only), `creditCosts()`, `status()`, `historyCoverage()`, `directory()`.
 
 ## With a key
 
-Free key (100 credits a month, no card): https://draftkingsapi.com/auth/sign-up?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js
+Free key (100 credits a month, no card): https://draftkingsapi.com/auth/sign-up?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js
 
 ```js
 const dk = new Client({
@@ -95,10 +100,10 @@ Keyed: `coverage`, `events`, `odds`, `history`, `pick6Projections`, `pick6Histor
 `contextPlayerStats`, `contextTeamStats`, `sportsbookScopes`, `sportsbookSnapshot`, `streamSnapshot`.
 
 Filters pass through unchanged; each route's parameters are in the
-[OpenAPI document](https://draftkingsapi.com/openapi.json) and the [docs](https://draftkingsapi.com/docs?utm_source=github&utm_medium=readme&utm_campaign=draftkingsapi-js).
+[OpenAPI document](https://draftkingsapi.com/openapi.json) and the [docs](https://draftkingsapi.com/docs?utm_source=npm&utm_medium=readme&utm_campaign=draftkingsapi-js).
 Not wrapped: the server-sent event stream, the native sportsbook WebSocket, and account and billing routes.
 
-Plans: Free 100 credits a month, Developer $49, Production $149, Scale $499 a month.
+Plans: Free 100 credits a month (no card), Developer $49 (10,000 credits), Pro $99 (30,000), Production $149 (50,000) and Scale $499 (250,000) a month. Full pricing: https://draftkingsapi.com/pricing.
 
 ## Development
 
